@@ -3,7 +3,7 @@
 Plugin Name: Kiwi IT - Days Away
 Plugin URI: http://kiwi-it.co.uk/?page_id=437
 Description: Displays the number of days until/after a specified date.  Example: [kit-days-away day=25 month=12 year=2012]
-Version: 1.0
+Version: 1.1
 Author: Steve Mosen
 Author URI: http://kiwi-it.co.uk
 License: GPL2
@@ -26,28 +26,42 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 function kit_days_away( $atts ) {
 	extract( shortcode_atts( array(
-		'day' 		=> 1,
-		'month'		=> 1,
-		'year'		=> 1960,
-		'offset'	=> 0,
+		'day' 		=> date("j"),
+		'month'		=> date("n"),
+		'year'		=> date("Y"),
 		'before'	=> "Event occurs",
 		'after'		=> "Event occurred",
-		'today'		=> ""
+		'today'		=> "Event occurs today!",
+		'offset'	=> 12
 	), $atts ) );
 
-	$days = (int)((time(void) + ($offset * 3600) - mktime(0, 0, 0, $month, $day, $year)) / 86400);
+	$diff = (time() + ($offset * 3600) - mktime(date("g"), date("i"), date("s"), $month, $day, $year)) / (60*60*24);
 
-	if ( $days < 0  && $before != "" ) {
-		$result = $before . " in " . absint($days) . " days";
-	}
-	elseif ( $days > 0 && $after != "" ) {
-		$result = $after . " " . $days . " days ago";
-	}
-	elseif ( 0 == $days ) {
+	if ( 0 == $diff ) {
 		$result = $today;
 	}
+	elseif ( 0 > $diff ) {
+		if (  $before != "" ) {
+			if ( -1 == $diff ) {
+				$result = $before . " tommorrow";
+			}
+			else {
+				$result = $before . " in " . absint($diff) . " days";
+			}
+		}
+	}
+	elseif ( 0 < $diff ) {
+		if ( $after != "" ) {
+			if ( 1 == $diff ) {
+				$result = $after . " yesterday";
+			}
+			else {
+				$result = $after . " " . round($diff) . " days ago";
+			}
+		}
+	}
 
-	return $result;
+	return $result; //." diff=".$diff;
 }
 add_shortcode( 'kit-days-away', 'kit_days_away' );
 
