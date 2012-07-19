@@ -3,7 +3,7 @@ Contributors: Kiwi Steve
 Tags: countdown, timer
 Requires at least: 3.4.1
 Tested up to: 3.4.1
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,7 +27,11 @@ I couldn't find a countdown timer that did exactly what I wanted (plain text, cu
 
 == Screenshots ==
 
-None.
+http://kiwi-it.co.uk/wp-content/uploads/2012/07/1-Editing.png
+http://kiwi-it.co.uk/wp-content/uploads/2012/07/2-Default-Output.png
+http://kiwi-it.co.uk/wp-content/uploads/2012/07/3-Editing.png
+http://kiwi-it.co.uk/wp-content/uploads/2012/07/4-Custom-Output.png
+
 
 == Changelog ==
 
@@ -38,3 +42,6 @@ None.
 * Updated plugin webpage.
 * Added day/month/year as defaults.
 * Now produces nicer output for events occuring yesterday/tomorrow.
+
+= 1.2 =
+* Amended the formula to ignore the time-part of the "now" date.

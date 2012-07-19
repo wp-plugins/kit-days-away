@@ -3,7 +3,7 @@
 Plugin Name: Kiwi IT - Days Away
 Plugin URI: http://kiwi-it.co.uk/?page_id=437
 Description: Displays the number of days until/after a specified date.  Example: [kit-days-away day=25 month=12 year=2012]
-Version: 1.1
+Version: 1.2
 Author: Steve Mosen
 Author URI: http://kiwi-it.co.uk
 License: GPL2
@@ -31,11 +31,10 @@ function kit_days_away( $atts ) {
 		'year'		=> date("Y"),
 		'before'	=> "Event occurs",
 		'after'		=> "Event occurred",
-		'today'		=> "Event occurs today!",
-		'offset'	=> 12
+		'today'		=> "Event occurs today!"
 	), $atts ) );
 
-	$diff = (time() + ($offset * 3600) - mktime(date("g"), date("i"), date("s"), $month, $day, $year)) / (60*60*24);
+	$diff = round((mktime(0, 0, 0, date("n"), date("j"), date("Y")) - mktime(0, 0, 0, $month, $day, $year)) / (60*60*24));
 
 	if ( 0 == $diff ) {
 		$result = $today;
@@ -61,7 +60,7 @@ function kit_days_away( $atts ) {
 		}
 	}
 
-	return $result; //." diff=".$diff;
+	return $result;
 }
 add_shortcode( 'kit-days-away', 'kit_days_away' );
 
