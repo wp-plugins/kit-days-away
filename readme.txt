@@ -3,7 +3,7 @@ Contributors: Kiwi Steve
 Tags: countdown, timer
 Requires at least: 3.4.1
 Tested up to: 3.4.1
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,4 +48,7 @@ I couldn't find a countdown timer that did exactly what I wanted (plain text, cu
 
 = 1.2.1 =
 * Amended header comment to remove "Kiwi IT" from the plugin name.
+
+= 1.2.2 =
+* Re-tagged to sort out the version numbers.
 
