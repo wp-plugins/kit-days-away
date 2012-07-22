@@ -1,14 +1,14 @@
 <?php
 /*
-Plugin Name: Kiwi IT - Days Away
+Plugin Name: Days Away
 Plugin URI: http://kiwi-it.co.uk/?page_id=437
 Description: Displays the number of days until/after a specified date.  Example: [kit-days-away day=25 month=12 year=2012]
-Version: 1.2
+Version: 1.2.1
 Author: Steve Mosen
 Author URI: http://kiwi-it.co.uk
 License: GPL2
 
-Copyright 2012  Steve Mosen  (email : Steve.Mosen@Kiwi-IT.co.uk)
+Copyright 2012 Steve Mosen (email: Steve.Mosen@Kiwi-IT.co.uk)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License, version 2, as 

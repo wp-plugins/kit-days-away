@@ -45,3 +45,7 @@ I couldn't find a countdown timer that did exactly what I wanted (plain text, cu
 
 = 1.2 =
 * Amended the formula to ignore the time-part of the "now" date.
+
+= 1.2.1 =
+* Amended header comment to remove "Kiwi IT" from the plugin name.
+
