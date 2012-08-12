@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== Days Away ===
 Contributors: Kiwi Steve
 Tags: countdown, timer
 Requires at least: 3.4.1
@@ -52,3 +52,5 @@ I couldn't find a countdown timer that did exactly what I wanted (plain text, cu
 = 1.2.2 =
 * Re-tagged to sort out the version numbers.
 
+= 1.2.3 =
+* Corrected header in readme file.
