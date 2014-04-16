@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Days Away
-Plugin URI: http://kiwi-it.co.uk/?page_id=437
+Plugin URI: http://kiwi-it.co.uk/wordpress-plugins/days_away/
 Description: Displays the number of days until/after a specified date.  Example: [kit-days-away day=25 month=12 year=2012]
-Version: 1.2.2
+Version: 1.2.3
 Author: Steve Mosen
 Author URI: http://kiwi-it.co.uk
 License: GPL2
@@ -42,7 +42,7 @@ function kit_days_away( $atts ) {
 	elseif ( 0 > $diff ) {
 		if (  $before != "" ) {
 			if ( -1 == $diff ) {
-				$result = $before . " tommorrow";
+				$result = $before . " tomorrow";
 			}
 			else {
 				$result = $before . " in " . absint($diff) . " days";

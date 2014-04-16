@@ -2,8 +2,8 @@
 Contributors: Kiwi Steve
 Tags: countdown, timer
 Requires at least: 3.4.1
-Tested up to: 3.4.1
-Stable tag: 1.2.2
+Tested up to: 3.9
+Stable tag: 1.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,3 +54,10 @@ I couldn't find a countdown timer that did exactly what I wanted (plain text, cu
 
 = 1.2.3 =
 * Corrected header in readme file.
+* Amended plugin URI.
+* Corrected spelling of "tomorrow".
+
+== Upgrade Notice ==
+
+= 1.2.3 =
+Updated readme.txt for WordPress 3.9 and some minor corrections.
